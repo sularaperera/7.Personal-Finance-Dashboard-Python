@@ -36,19 +36,22 @@ This Python code snippet demonstrates a project that involves processing financi
   - The 'Date' column is converted to datetime format.
   - A new column 'Sub Category' is initialized with 'Unassigned'.
 
-- Categorization Rules:
+### Categorization Rules:
 
-Categories are assigned based on predefined keywords found in the 'Description' column.
-Various categories like 'Salary', 'Other Income', 'Rental', 'Utility Bills', etc., are defined with corresponding keyword patterns.
-The np.where function is used to categorize rows based on conditions defined by keyword patterns.
-Categorization Hierarchies:
+- Categories are assigned based on predefined keywords found in the 'Description' column.
+- Various categories like 'Salary', 'Other Income', 'Rental', 'Utility Bills', etc., are defined with corresponding keyword patterns.
+- The np.where function is used to categorize rows based on conditions defined by keyword patterns.
 
-A higher-level categorization called 'Category' is assigned based on 'Sub Category' assignments.
-Categories are grouped into broader groups like 'Earnings', 'Transport', 'Living Expenses', etc.
-Similar to the subcategory categorization, np.where is used for category assignments.
-Exporting Processed Data:
+### Categorization Hierarchies:
 
-The processed DataFrame is saved as a CSV file in a designated folder using the to_csv method.
-Documentation:
+- A higher-level categorization called 'Category' is assigned based on 'Sub Category' assignments.
+- Categories are grouped into broader groups like 'Earnings', 'Transport', 'Living Expenses', etc.
+- Similar to the subcategory categorization, np.where is used for category assignments.
 
-A brief summary of the project, its objectives, and a detailed explanation of each code section is provided. This documentation aims to help others understand and replicate the project's functionality.
+### Exporting Processed Data:
+
+- The processed DataFrame is saved as a CSV file in a designated folder using the to_csv method.
+
+### Documentation:
+
+- A brief summary of the project, its objectives, and a detailed explanation of each code section is provided. This documentation aims to help others understand and replicate the project's functionality.
