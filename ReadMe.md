@@ -60,4 +60,4 @@ This Python code snippet demonstrates a project that involves processing financi
 This project demonstrates an automated method for categorizing financial transactions using predefined keyword patterns. It processes CSV files, extracts relevant data, applies categorization rules, and generates a master file with categorized information. The code can be adapted for various financial tracking and analysis purposes.
 
 
-[Click here to see the full source code](https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/ETL/ETL_Bank_Trasactions.ipynb)
+[Click here to see the code](https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/ETL/ETL_Bank_Trasactions.ipynb)
