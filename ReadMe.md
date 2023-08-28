@@ -56,11 +56,23 @@ This Python code snippet demonstrates a project that involves processing financi
 
 - A brief summary of the project, its objectives, and a detailed explanation of each code section is provided. This documentation aims to help others understand and replicate the project's functionality.
 <br>
+Import necessary libraries
 <img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/1.png width=800></img>
 <br>
+Define the path to the ANZ raw data folder and use rglob to recursively find all CSV files in the specified folder
 <img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/2.png width=800></img>
 <br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/3.png width=800></img>
+- Iterates through each CSV file in the specified folder
+- Reads the CSV file and selects specific columns ('Details', 'Particulars', 'Code', 'Reference', 'Amount', 'Date')
+- Adds a new column 'File' containing the name of the processed file |Converts certain columns ('Details', 'Particulars', 'Code', 'Reference') to lowercase
+- Merges the selected columns into a new column called 'Description', joining non-empty values with a space.
+- Converts the 'Date' column from a string format to a datetime object, and then to a formatted string for presentation purposes.
+- Reorders the columns.
+- Appends each processed dataframe to a list called 'df_list_anz'.
+- Combines all dataframes in 'df_list_anz' into a single dataframe named 'final_df_anz'.
+- Displays the first few rows of the combined dataframe.
+- Overall, the code reads, processes, and combines CSV data into a structured format for analysis or further processing.
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/3.png width=1000></img>
 <br>
 <img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/4.png width=800></img>
 <br>
