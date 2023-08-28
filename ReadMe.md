@@ -61,7 +61,7 @@ Import necessary libraries
 <br>
 Define the path to the ANZ raw data folder and use rglob to recursively find all CSV files in the specified folder
 <img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/2.png width=800></img>
-<br>
+
 ### comment:
 - Iterates through each CSV file in the specified folder
 - Reads the CSV file and selects specific columns ('Details', 'Particulars', 'Code', 'Reference', 'Amount', 'Date')
@@ -73,7 +73,7 @@ Define the path to the ANZ raw data folder and use rglob to recursively find all
 - Combines all dataframes in 'df_list_anz' into a single dataframe named 'final_df_anz'.
 - Displays the first few rows of the combined dataframe.
 - Overall, the code reads, processes, and combines CSV data into a structured format for analysis or further processing.
-<br>
+
 <img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/3.png width=1000></img>
 <br>
 <img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/4.png width=800></img>
