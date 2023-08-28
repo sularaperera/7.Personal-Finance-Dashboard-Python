@@ -55,6 +55,36 @@ This Python code snippet demonstrates a project that involves processing financi
 ### Documentation:
 
 - A brief summary of the project, its objectives, and a detailed explanation of each code section is provided. This documentation aims to help others understand and replicate the project's functionality.
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/1.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/2.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/3.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/4.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/5.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/6.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/7.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/8.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/9.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/10.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/11.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/12.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/13.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/14.png width=800></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/15.png width=800></img>
 
 ### Conclusion:
 This project demonstrates an automated method for categorizing financial transactions using predefined keyword patterns. It processes CSV files, extracts relevant data, applies categorization rules, and generates a master file with categorized information. The code can be adapted for various financial tracking and analysis purposes.
