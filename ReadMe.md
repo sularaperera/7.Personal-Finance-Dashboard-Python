@@ -44,7 +44,7 @@ The master DataFrame final_df_processed includes the following columns: 'Date', 
 Transactions are categorized based on their descriptions using fuzzy matching. A list of keywords is defined for common categories. For each keyword:
 
 - Fuzzy matching is performed using the thefuzz library.
-- If the matching score is 80 or above, the corresponding category is assigned to the 'Sub Category' column in the DataFrame.
+- If the matching score is 80 or above, the corresponding category is assigned to the 'Sub Category' column in the DataFrame using NumPy function.
 
 ## 5. Data Presentation
 #### Exporting to Presentation Data
