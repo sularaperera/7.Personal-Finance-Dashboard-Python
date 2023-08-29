@@ -46,51 +46,7 @@ Transactions are categorized based on their descriptions using fuzzy matching. A
 - Fuzzy matching is performed using the thefuzz library.
 - If the matching score is 80 or above, the corresponding category is assigned to the 'Sub Category' column in the DataFrame using NumPy function.
 
-## 5. Data Presentation
-#### Exporting to Presentation Data
-The transformed and categorized data is exported to the 3.Presentation-Gold folder. The final_df_processed DataFrame is exported to a CSV file named Master_File.csv. This file contains cleaned, formatted, and categorized transaction data, ready for analysis and presentation.
-
-## 6. Conclusion
-This Python project demonstrates an effective approach to handling banking transaction data without direct access to bank APIs. The process involves downloading CSV files, transforming data using Pandas, and categorizing transactions based on descriptions. The well-structured folder organization ensures data separation and ease of management throughout the transformation pipeline. The resulting categorized data is presented in a master CSV file, facilitating further analysis and reporting. While manual CSV downloading is currently employed, the project's modular structure allows for seamless integration of bank APIs in the future.
-
-#### Data Analysis
-- The consolidated CSV file is used for data analysis.
-- Spending patterns, income sources, and other insights are visualized and analyzed using matplotlib and seaborn.
-## Project Steps:
-
-### Import Required Libraries:
-
--  The project starts by importing necessary libraries such as pandas, numpy, Path from pathlib, re for regular expressions, and datetime for date manipulation.
-
-### Defining Input Paths:
-
-- The path to the directory containing raw transaction data files is defined using the Path class.
-- The code lists all CSV files in the specified directory and its subdirectories using the rglob function.
-
-### Reading and Processing Data:
-
-- A list named df_list_anz is created to store individual DataFrames after processing.
-- For each CSV file found in the specified directory:
-  - The relevant columns ('Date', 'Details', 'Particulars', 'Code', 'Reference', 'Amount') are extracted and reordered.
-  - A 'File' column is added to store the file name.
-  - Text columns are converted to lowercase for consistency.
-  - Columns are merged to create a 'Description' column.
-  - The 'Date' column is converted to a datetime object.
-  - A 'Formatted_Date' column is added for presentation purposes.
-  - The DataFrame is appended to the df_list_anz.
-
-### Concatenating DataFrames:
-
-- All individual DataFrames in df_list_anz are concatenated into a single DataFrame called final_df_anz.
-
-### Data Cleaning and Transformation:
-
-- In the 'final_df_anz':
-  - Missing values are filled with 'N/A'.
-  - The 'Date' column is converted to datetime format.
-  - A new column 'Sub Category' is initialized with 'Unassigned'.
-
-### Categorization Rules:
+#### Categorization Rules:
 
 - Categories are assigned based on predefined keywords found in the 'Description' column.
 - Various categories like 'Salary', 'Other Income', 'Rental', 'Utility Bills', etc., are defined with corresponding keyword patterns.
@@ -99,8 +55,29 @@ This Python project demonstrates an effective approach to handling banking trans
 ### Categorization Hierarchies:
 
 - A higher-level categorization called 'Category' is assigned based on 'Sub Category' assignments.
-- Categories are grouped into broader groups like 'Earnings', 'Transport', 'Living Expenses', etc.
+- Categories are grouped into broader groups like 'Income', 'Transport', 'Living Expenses', etc.
 - Similar to the subcategory categorization, np.where is used for category assignments.
+
+## 5. Data Presentation
+#### Exporting to Presentation Data
+The transformed and categorized data is exported to the 3.Presentation-Gold folder. The final_df_processed DataFrame is exported to a CSV file named Master_File.csv. This file contains cleaned, formatted, and categorized transaction data, ready for analysis and presentation.
+
+## 6. Conclusion
+This Python project demonstrates an effective approach to handling banking transaction data without direct access to bank APIs. The process involves downloading CSV files, transforming data using Pandas, and categorizing transactions based on descriptions. The well-structured folder organization ensures data separation and ease of management throughout the transformation pipeline. The resulting categorized data is presented in a master CSV file, facilitating further analysis and reporting. While manual CSV downloading is currently employed, the project's modular structure allows for seamless integration of bank APIs in the future.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Exporting Processed Data:
 
