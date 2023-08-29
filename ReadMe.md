@@ -35,10 +35,15 @@ Python's Pandas library is used for data manipulation. The ANZ data extraction p
 - Columns related to transaction details are merged into a 'Description' column.
 - Date values are converted to date data type and a formatted date column is added.
 - Columns are reordered for better readability.
-The processed DataFrames are then concatenated into a single master DataFrame named final_df_processed.
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/3.png width=1000></img>
+
 
 #### Creating Master DataFrame
+
 The master DataFrame final_df_processed includes the following columns: 'Date', 'Description', 'Amount', 'File'.
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/6.png width=1000></img>
 
 #### Categorizing Transactions
 Transactions are categorized based on their descriptions using fuzzy matching. A list of keywords is defined for common categories. For each keyword:
@@ -46,13 +51,18 @@ Transactions are categorized based on their descriptions using fuzzy matching. A
 - Fuzzy matching is performed using the thefuzz library.
 - If the matching score is 80 or above, the corresponding category is assigned to the 'Sub Category' column in the DataFrame using NumPy function.
 
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/7.png width=1000></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/8.png width=1000></img>
+
 #### Categorization Rules:
 
 - Categories are assigned based on predefined keywords found in the 'Description' column.
 - Various categories like 'Salary', 'Other Income', 'Rental', 'Utility Bills', etc., are defined with corresponding keyword patterns.
 - The np.where function is used to categorize rows based on conditions defined by keyword patterns.
 
-### Categorization Hierarchies:
+#### Categorization Hierarchies:
 
 - A higher-level categorization called 'Category' is assigned based on 'Sub Category' assignments.
 - Categories are grouped into broader groups like 'Income', 'Transport', 'Living Expenses', etc.
@@ -61,77 +71,14 @@ Transactions are categorized based on their descriptions using fuzzy matching. A
 ## 5. Data Presentation
 #### Exporting to Presentation Data
 The transformed and categorized data is exported to the 3.Presentation-Gold folder. The final_df_processed DataFrame is exported to a CSV file named Master_File.csv. This file contains cleaned, formatted, and categorized transaction data, ready for analysis and presentation.
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/14.png width=1000></img>
+<br>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/15.png width=1000></img>
+
 
 ## 6. Conclusion
 This Python project demonstrates an effective approach to handling banking transaction data without direct access to bank APIs. The process involves downloading CSV files, transforming data using Pandas, and categorizing transactions based on descriptions. The well-structured folder organization ensures data separation and ease of management throughout the transformation pipeline. The resulting categorized data is presented in a master CSV file, facilitating further analysis and reporting. While manual CSV downloading is currently employed, the project's modular structure allows for seamless integration of bank APIs in the future.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Exporting Processed Data:
-
-- The processed DataFrame is saved as a CSV file in a designated folder using the to_csv method.
-
-### Documentation:
-
-- A brief summary of the project, its objectives, and a detailed explanation of each code section is provided. This documentation aims to help others understand and replicate the project's functionality.
-<br>
-Import necessary libraries
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/1.png width=800></img>
-<br>
-Define the path to the ANZ raw data folder and use rglob to recursively find all CSV files in the specified folder
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/2.png width=800></img>
-
-- Iterates through each CSV file in the specified folder
-- Reads the CSV file and selects specific columns ('Details', 'Particulars', 'Code', 'Reference', 'Amount', 'Date')
-- Adds a new column 'File' containing the name of the processed file |Converts certain columns ('Details', 'Particulars', 'Code', 'Reference') to lowercase
-- Merges the selected columns into a new column called 'Description', joining non-empty values with a space.
-- Converts the 'Date' column from a string format to a datetime object, and then to a formatted string for presentation purposes.
-- Reorders the columns.
-- Appends each processed dataframe to a list called 'df_list_anz'.
-- Combines all dataframes in 'df_list_anz' into a single dataframe named 'final_df_anz'.
-- Displays the first few rows of the combined dataframe.
-- Overall, the code reads, processes, and combines CSV data into a structured format for analysis or further processing.
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/3.png width=1000></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/4.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/5.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/6.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/7.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/8.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/9.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/10.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/11.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/12.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/13.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/14.png width=800></img>
-<br>
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/15.png width=800></img>
-
-### Conclusion:
-This project demonstrates an automated method for categorizing financial transactions using predefined keyword patterns. It processes CSV files, extracts relevant data, applies categorization rules, and generates a master file with categorized information. The code can be adapted for various financial tracking and analysis purposes.
 
 
 [Click here to see the code](https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/ETL/ETL_Bank_Trasactions.ipynb)
