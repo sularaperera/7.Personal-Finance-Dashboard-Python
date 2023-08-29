@@ -11,7 +11,7 @@ The project relies on CSV files downloaded manually from different bank accounts
 The project utilizes the following tools and libraries:
 
 - Python: The scripting language used for the entire pipeline.
-- pandas: Used for data manipulation and transformation.
+- pandas and numpy: Used for data manipulation and transformation.
 - Fuzzy matching is performed using the thefuzz library.
 
 ## 2. Folder Structure
