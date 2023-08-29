@@ -12,7 +12,7 @@ The project utilizes the following tools and libraries:
 
 - Python: The scripting language used for the entire pipeline.
 - pandas: Used for data manipulation and transformation.
-- ****matplotlib, seaborn: Employed for data visualization and analysis.
+- Fuzzy matching is performed using the thefuzz library.
 
 ## 2. Folder Structure
 The project is organized into three main folders, each representing a stage in the data transformation pipeline.
