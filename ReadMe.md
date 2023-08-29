@@ -23,7 +23,7 @@ The project is organized into three main folders, each representing a stage in t
 
 Data flows through these layers: Raw → Processed → Presentation.
 
-## 2. Project Components
+## 3. Project Components
 #### Data Extraction
 - The CSV files from banks such as ASB, ANZ, GEM credit card, and Q Credit card are stored in separate folders within the 1.Raw-Bronze directory.
 - CSV files are organized by banks within the 1.Raw-Bronze folder. For instance, CSV files from ANZ are saved under ANZ sub-folder. The organization helps maintain data separation and clarity.
@@ -68,7 +68,7 @@ Transactions are categorized based on their descriptions using fuzzy matching. A
 - Categories are grouped into broader groups like 'Income', 'Transport', 'Living Expenses', etc.
 - Similar to the subcategory categorization, np.where is used for category assignments.
 
-## 5. Data Presentation
+## 4. Data Presentation
 #### Exporting to Presentation Data
 The transformed and categorized data is exported to the 3.Presentation-Gold folder. The final_df_processed DataFrame is exported to a CSV file named Master_File.csv. This file contains cleaned, formatted, and categorized transaction data, ready for analysis and presentation.
 <br>
@@ -77,7 +77,7 @@ The transformed and categorized data is exported to the 3.Presentation-Gold fold
 <img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Code%20Snippets/15.png width=1000></img>
 
 
-## 6. Conclusion
+## 5. Conclusion
 This Python project demonstrates an effective approach to handling banking transaction data without direct access to bank APIs. The process involves downloading CSV files, transforming data using Pandas, and categorizing transactions based on descriptions. The well-structured folder organization ensures data separation and ease of management throughout the transformation pipeline. The resulting categorized data is presented in a master CSV file, facilitating further analysis and reporting. While manual CSV downloading is currently employed, the project's modular structure allows for seamless integration of bank APIs in the future.
 
 
