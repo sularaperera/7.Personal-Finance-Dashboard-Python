@@ -25,13 +25,34 @@ Data flows through these layers: Raw → Processed → Presentation.
 
 ## 2. Project Components
 #### Data Extraction
-- CSV files are downloaded manually from each bank's online portal and organized into respective folders.
+- The CSV files from banks such as ASB, ANZ, GEM credit card, and Q Credit card are stored in separate folders within the 1.Raw-Bronze directory.
+- CSV files are organized by banks within the 1.Raw-Bronze folder. For instance, CSV files from ANZ are saved under ANZ sub-folder. The organization helps maintain data separation and clarity.
 #### Data Transformation
-- Each CSV file is read into a pandas DataFrame.
-- Data is cleaned, missing values are handled, and a consistent schema is established.
-- Additional columns are created to represent the bank or card account.
-#### Data Loading
-- Cleaned and transformed data from each CSV file is appended to a master CSV file.
+Cleaning and Formatting
+Python's Pandas library is used for data manipulation. The ANZ data extraction process is similar to other banks.
+- CSV files are read into Pandas DataFrames.
+- Columns are converted to lowercase for consistency.
+- Columns related to transaction details are merged into a 'Description' column.
+- Date values are converted to date data type and a formatted date column is added.
+- Columns are reordered for better readability.
+The processed DataFrames are then concatenated into a single master DataFrame named final_df_processed.
+
+#### Creating Master DataFrame
+The master DataFrame final_df_processed includes the following columns: 'Date', 'Description', 'Amount', 'File'.
+
+#### Categorizing Transactions
+Transactions are categorized based on their descriptions using fuzzy matching. A list of keywords is defined for common categories. For each keyword:
+
+- Fuzzy matching is performed using the thefuzz library.
+- If the matching score is 80 or above, the corresponding category is assigned to the 'Sub Category' column in the DataFrame.
+
+## 5. Data Presentation
+#### Exporting to Presentation Data
+The transformed and categorized data is exported to the 3.Presentation-Gold folder. The final_df_processed DataFrame is exported to a CSV file named Master_File.csv. This file contains cleaned, formatted, and categorized transaction data, ready for analysis and presentation.
+
+## 6. Conclusion
+This Python project demonstrates an effective approach to handling banking transaction data without direct access to bank APIs. The process involves downloading CSV files, transforming data using Pandas, and categorizing transactions based on descriptions. The well-structured folder organization ensures data separation and ease of management throughout the transformation pipeline. The resulting categorized data is presented in a master CSV file, facilitating further analysis and reporting. While manual CSV downloading is currently employed, the project's modular structure allows for seamless integration of bank APIs in the future.
+
 #### Data Analysis
 - The consolidated CSV file is used for data analysis.
 - Spending patterns, income sources, and other insights are visualized and analyzed using matplotlib and seaborn.
