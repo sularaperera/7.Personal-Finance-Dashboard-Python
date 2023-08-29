@@ -1,7 +1,40 @@
 <img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Images/banner_new.png></img>
 
-This Python project that involves processing financial transaction data to categorize expenses and incomes automatically. The project aims to organize transaction data from various CSV files, categorize them into predefined categories, and generate a master file with the categorized data for further analysis and reporting.
+The Financial Data ETL (Extract, Transform, Load) Pipeline project aims to automate the process of collecting, organizing, and analyzing financial transaction data from different bank accounts. The project involves downloading CSV files from bank accounts, standardizing and cleaning the data, and then consolidating it into a master CSV file. This documentation provides a detailed overview of the project's purpose, components, and usage instructions.
 
+## 1. Introduction
+#### Project Goals
+The primary goal of the Financial Data ETL Pipeline is to automate the process of collecting, standardizing, and consolidating financial transaction data from various bank accounts. This enables users to analyze their spending patterns, income sources, and other financial insights easily.
+#### Data Sources
+The project relies on CSV files downloaded manually from different bank accounts. The CSV files are organized into separate folders based on the bank or card account, such as ASB, ANZ, GEM, and Q Card.
+#### Tools and Libraries
+The project utilizes the following tools and libraries:
+
+- Python: The scripting language used for the entire pipeline.
+- pandas: Used for data manipulation and transformation.
+- ****matplotlib, seaborn: Employed for data visualization and analysis.
+
+## 2. Folder Structure
+The project is organized into three main folders, each representing a stage in the data transformation pipeline.
+
+- 1.Raw-Bronze: This folder holds the raw CSV files downloaded from different banks.
+- 2.Processed-Silver: Processed data from the raw CSV files is saved here, maintaining consistent data schema.
+- 3.Presentation-Gold: Cleaned and categorized data is exported to this folder for presentation and analysis.
+
+Data flows through these layers: Raw → Processed → Presentation.
+
+## 2. Project Components
+#### Data Extraction
+- CSV files are downloaded manually from each bank's online portal and organized into respective folders.
+#### Data Transformation
+- Each CSV file is read into a pandas DataFrame.
+- Data is cleaned, missing values are handled, and a consistent schema is established.
+- Additional columns are created to represent the bank or card account.
+#### Data Loading
+- Cleaned and transformed data from each CSV file is appended to a master CSV file.
+#### Data Analysis
+- The consolidated CSV file is used for data analysis.
+- Spending patterns, income sources, and other insights are visualized and analyzed using matplotlib and seaborn.
 ## Project Steps:
 
 ### Import Required Libraries:
