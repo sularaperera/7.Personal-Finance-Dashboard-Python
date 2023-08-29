@@ -1,4 +1,4 @@
-<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Images/banner.png></img>
+<img src=https://github.com/sularaperera/Personal-Finance-Dashboard/blob/main/Images/banner_new.png></img>
 
 This Python project that involves processing financial transaction data to categorize expenses and incomes automatically. The project aims to organize transaction data from various CSV files, categorize them into predefined categories, and generate a master file with the categorized data for further analysis and reporting.
 
